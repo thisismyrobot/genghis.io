@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>GenghisIO - {% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="/css/style.css">
+        {% block pagecss %}
+        {% endblock %}
+        {% block pagejs %}
+        {% endblock %}
+    </head>
+    <body>
+        <div id="header">
+            <div id="header_inner">
+                <h1>GenghisIO</h1>
+                <div id="link_bar">
+                    <ul>
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/develop">Develop</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div id="app_wide">
+            <div id="app">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

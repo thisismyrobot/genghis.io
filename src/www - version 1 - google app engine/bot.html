@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            html,
+            body {
+                margin:0;
+                padding:0;
+            }
+            #bot,
+            #bot *{
+                width:32px;
+                height:32px;
+            }
+            #bot {
+                position: fixed;
+                left:250px;
+                top:250px;
+            }
+            #bot img,
+            #bot .jsgif {
+                position: absolute;
+            }
+            #bot_shadow {
+                border: 4px solid silver;
+                position: absolute;
+                top: 4px;
+                left: 4px;
+                width: 16px;
+                height: 16px;
+                border-radius: 16px;
+                box-shadow: 2px 2px 4px rgb(180, 180, 180);
+            }
+            #bot_glow {
+                position: absolute;
+                top: 4px;
+                left: 4px;
+                width: 24px;
+                height: 24px;
+                border-radius: 24px;
+                box-shadow: 0px 0px 24px;
+                color: white; /* sets the box-shadow colour, creating a glow */
+            }
+            #horiz_bot_gif,
+            #jsgif_horiz_bot_gif {
+                display: none;
+            }
+        </style>
+        <script type="text/javascript">
+            var qr = '{{ qr }}';
+        </script>
+        <script type="text/javascript" src="/js/bot.js"></script>
+    </head>
+    <body>
+        <div id="bot">
+            <div id="bot_shadow"></div>
+            <img id="bot_gif" src="/img/ballbot/start.png" rel:animated_src="/img/ballbot/all.gif" rel:auto_play="0" />
+            <div id="bot_glow"></div>
+        </div>
+    </body>
+</html>

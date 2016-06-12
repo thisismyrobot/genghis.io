@@ -1,0 +1,80 @@
+application: genghisapp
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+default_expiration: "10m"
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+
+handlers:
+
+# Javascript resources
+- url: /js/(.*)
+  static_files: js/\1
+  upload: js/*
+
+# CSS resources
+- url: /css/(.*)
+  static_files: css/\1
+  upload: css/*
+
+# images
+- url: /img/(.*)
+  static_files: img/\1
+  upload: img/*
+
+# The temporary APK link
+- url: /genghisiobridge.apk
+  static_files: apk/genghisiobridge.apk
+  upload: apk/genghisiobridge.apk
+  expiration: "1m"
+
+# Empython implementation
+- url: /emp/(.*)
+  static_files: emp/\1
+  upload: emp/*
+  expiration: "30d"
+
+# App root
+- url: /
+  script: index.application
+
+# Develop page (the IDE)
+- url: /develop
+  script: develop.application
+
+# The public REST API endpoints
+- url: /api/.*
+  script: api.application
+
+# The web test bot
+- url: /bot/.*
+  script: bot.application
+
+# JS tests - runner
+- url: /tests
+  script: tests.application
+
+# JS tests - files
+- url: /tests/(.*)
+  static_files: tests/js/\1
+  upload: tests/js/*
+  expiration: "0s"
+
+# Android WebView app
+- url: /android(.*)
+  script: android.application
+
+# Skip the build folders
+skip_files:
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*/RCS/.*$
+- ^(.*/)?\..*$
+#- .*/_build/.*

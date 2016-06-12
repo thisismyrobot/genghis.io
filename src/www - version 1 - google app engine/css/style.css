@@ -1,0 +1,117 @@
+/*
+
+    Colours:
+        * Main blue: rgb(23, 151, 207);
+            * Buttons:
+                * Gradient: rgb(43, 168, 217) rgb(23, 151, 207);
+                * Gradient hover: rgb(23, 151, 207) rgb(20, 145, 190);
+        * Mid blue: rgb(153, 224, 255);
+        * Light blue: rgb(68, 177, 227);
+        * Light grey: rgb(230, 230, 230);
+        * Metallic grey: rgb(43, 43, 43);
+
+*/
+/*
+
+    Main page layout.
+
+*/
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+#app {
+    width: 980px;
+    position: relative;
+    left:50%;
+    margin-left:-490px;
+}
+
+/*
+
+    Header
+
+*/
+#header {
+    background-color: rgb(23, 151, 207);
+}
+
+#header_inner {
+    padding:10px 0;
+    width:980px;
+    margin-left:-490px;
+    position: relative;
+    left:50%;
+}
+
+#header h1 {
+    margin:0;
+    font-weight: normal;
+    display:inline;
+    font-size:18px;
+    vertical-align:middle;
+    color: white;
+}
+
+#link_bar,
+#link_bar ul,
+#link_bar li {
+    display:inline;
+    padding:0;
+}
+
+#link_bar {
+    text-align: center;
+}
+
+#link_bar a {
+    vertical-align:middle;
+    font-size:14px;
+    text-decoration: none;
+    color: white;
+    padding-left:40px
+}
+
+#link_bar a:hover {
+    text-decoration: underline;
+}
+
+/*
+
+    Buttons
+
+*/
+input[type="button"] {
+    font-family: inherit;
+    background: linear-gradient(rgb(23, 151, 207), rgb(20, 145, 190));
+    border-radius:4px;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    text-shadow: 0px 0px 1px rgb(220, 220, 220);
+    outline: none;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background: linear-gradient(rgb(43, 168, 217), rgb(23, 151, 207));
+    text-shadow: 0px 0px 1px rgb(230, 230, 230);
+}
+
+input[type="button"]:active {
+    box-shadow: 0 0 5px white;
+}
+
+input[type="button"]:disabled {
+    background: rgb(230, 230, 230) !important;
+    cursor:auto;
+    color: rgb(210, 210, 210);
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="/static/js/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="/static/js/jquery.qrcode.min.js"></script>
+        <script type="text/javascript" src="/static/js/dropzone.js"></script>
+        <script type="text/javascript" src="/static/js/socket.io.min.js"></script>
+        <script type="text/javascript" src="/static/js/index.js"></script>
+
+        <link href="/static/css/iconFont.min.css" rel="stylesheet">
+        <style type="text/css">
+            body {
+                background-color: #cccccc;
+                padding: 10px 0 0 0;
+                margin: 0;
+            }
+            #main_col {
+                width: 550px;
+                margin-left: -275px;
+                left: 50%;
+                position: absolute;
+                background-color: white;
+            }
+            #main_col_inner {
+                padding: 10px;
+            }
+            #debug_frame {
+                height: 150px;
+                overflow-y: scroll;
+                width: 100%;
+                background-color: black;
+                color: white;
+                font-family: "Courier New", Courier, monospace;
+                font-size: 12px;
+                clear:both;
+            }
+            #debug {
+                padding:5px;
+            }
+            #qrcode {
+                float:right;
+                height: 100px;
+                width: 100px;
+                padding-bottom: 10px;
+            }
+            #the_drop {
+                display: inline-block;
+                padding:24px;
+                background-color: white;
+                border: 1px solid silver;
+                text-align: center;
+                margin:0 0 10px 0;
+                cursor: pointer;
+            }
+            #icon_wrap {
+                font-size: 12px;
+                color:silver;
+            }
+            #icon::before {
+                font-size:64px;
+            }
+            #icon {
+                display: block;
+            }
+            #the_drop .dz-preview {
+                display:none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main_col">
+            <div id="main_col_inner">
+                <div id="qrcode"></div>
+                <div id="the_drop">
+                    <div id="icon_wrap">
+                        <div id="icon" class="icon-upload-2">
+                        </div>
+                        (drop file)
+                    </div>
+                    <input type="hidden" name="sessionId" value="" />
+                </div>
+                <!--
+                <input name="url" type="text" placeholder="Paste URL" />
+                -->
+                <div id="current_filename"></div>
+                <div id="debug_frame">
+                    <div id="debug"></div>
+                </div>
+            </div>
+        </div>
+        <iframe style="display:none" src="" name="upload_target"></iframe>
+    </body>
+</html>

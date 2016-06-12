@@ -1,0 +1,193 @@
+/*
+
+    Column layout
+
+*/
+.col {
+    position: absolute;
+    display: none;
+}
+
+.col .inner {
+    padding-top:15px;
+}
+
+#main .inner {
+    padding-right:10px;
+}
+
+#main {
+    left:0;
+    width: 60%;
+}
+
+#controls {
+    left: 60%;
+    width: 40%;
+}
+
+/*
+
+    BallBot
+
+*/
+#ballbot {
+    display: none;
+    margin-top: 12px;
+    border-right: 2px solid rgb(230, 230, 230);
+    margin-right: 10px;
+}
+
+#ballbot iframe {
+    width: 100%;
+    height: 500px;
+}
+
+/*
+
+    IDE
+
+*/
+div.CodeMirror {
+    background-color: white;
+    height:100%;
+    border-right: 2px solid rgb(230, 230, 230);
+    padding-bottom:10px;
+    padding-right:5px;
+    margin-top:-3px;
+    margin-left:-4px;
+}
+
+
+/*
+
+    Feedback and debugging panels.
+
+*/
+.console > pre {
+    padding: 5px;
+    background-color: black;
+    color:white;
+    height: 191px;
+    overflow-y: scroll;
+}
+
+.console h3 {
+    margin-bottom:0;
+}
+
+.example {
+    font-weight: bold;
+}
+
+/*
+
+    Drop-down panel(s)
+
+*/
+.dropdown > div {
+    padding: 3px 5px 3px 0;
+}
+
+.dropdown .dropdown_content {
+    display: none;
+}
+
+.dropdown .dropdown_header {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.dropdown .dropdown_header::before {
+    content:"+";
+    font-family: monospace;
+}
+
+.dropdown.extended .dropdown_header::before {
+    content:"-";
+    font-family: monospace;
+}
+
+.dropdown h1 {
+    font-size:15px;
+    margin:0;
+}
+
+#examples_dropdown table {
+    width:100%;
+    font-family:Arial;
+    margin:10px
+}
+
+#examples_dropdown td.title {
+    font-weight: bold;
+    padding-right:20px;
+    width:20%;
+}
+
+#examples_dropdown .difficulty {
+    text-align: right;
+}
+
+#examples_dropdown .difficulty.stars_1::before {
+    content: '\2605';
+    color: blue;
+}
+
+#examples_dropdown .difficulty.stars_2::before {
+    content: '\2605\2605';
+    color: green;
+}
+
+#examples_dropdown .difficulty.stars_3::before {
+    content: '\2605\2605\2605';
+    color: yellow;
+}
+
+#examples_dropdown .difficulty.stars_4::before {
+    content: '\2605\2605\2605\2605';
+    color: orange;
+}
+
+#examples_dropdown .difficulty.stars_5::before {
+    content: '\2605\2605\2605\2605\2605';
+    color:red;
+}
+
+#input {
+    display:none;
+}
+
+/*
+
+    Progress bar
+
+*/
+#progress_meter,
+#progress_bar {
+    height:4px;
+    padding:0;
+}
+
+#progress_meter {
+    width:100px;
+    margin: 8px 2px 2px 2px;
+}
+
+#progress_meter.lit #progress_bar {
+    background-color: rgb(230, 230, 230);
+    -webkit-transition: background-color 500ms linear;
+    -moz-transition: background-color 500ms linear;
+    -o-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+}
+
+#progress_bar {
+    background-color: rgb(23, 151, 207);
+    -webkit-transition: background-color 500ms linear;
+    -moz-transition: background-color 500ms linear;
+    -o-transition: background-color 500ms linear;
+    -ms-transition: background-color 500ms linear;
+    transition: background-color 500ms linear;
+}

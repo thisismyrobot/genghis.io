@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_server_titles">
+        <item>Production</item>
+        <item>Test PC</item>
+        <item>Test PC (skip)</item>
+        <item>Test Laptop</item>
+        <item>Test Laptop (skip)</item>
+    </string-array>
+    <string-array name="pref_server_values">
+        <item>http://genghis.io/android</item>
+        <item>http://192.168.1.104:8080/android</item>
+        <item>http://192.168.1.104:8080/android/ready/sphero</item>
+        <item>http://192.168.1.114:8080/android</item>
+        <item>http://192.168.1.114:8080/android/ready/sphero</item>
+    </string-array>
+</resources>

@@ -1,0 +1,15 @@
+*.pyc
+*.class
+.gradle
+build/
+*.apk
+*.ap_
+bin/
+gen/
+out/
+.nagivation
+*.jks
+.idea/workspace.xml
+_build/
+*.properties
+*.log

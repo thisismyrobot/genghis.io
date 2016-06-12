@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="/js/_build/js/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="/js/android.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var botId = $('#botId').val();
+                var btFilter = genghisio.BTFILTERS[botId];
+                Android.connectRobot(btFilter);
+            });
+        </script>
+    </head>
+    <body>
+        <input type="hidden" value="{{ botId }}" id="botId" />
+        Connecting...
+    </body>
+</html>

@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Develop!
+{% endblock %}
+
+{% block pagecss %}
+    <link rel="stylesheet" type="text/css" href="/css/codemirror.css">
+    <link rel="stylesheet" type="text/css" href="/css/develop.css">
+{% endblock %}
+
+{% block pagejs %}
+    <script type="text/javascript" src="/_ah/channel/jsapi"></script>
+    <script type="text/javascript">
+        var genghis_state_driver_id = 'ballbot';
+        var genghis_state_token = '{{ token }}';
+        var genghis_state_client_id = '{{ client_id }}';
+    </script>
+    <script type="text/javascript" src="/js/develop.js"></script>
+{% endblock %}
+
+{% block content %}
+    <div id="botselector">
+        <div class="inner">
+            <h1>Select a robot</h1>
+            <select id="bot_select">
+                <option value="ballbot" selected="selected">BallBot</option>
+                <option value="sphero">Sphero 2.0</option>
+            </select>
+            <input type="button" value="Start coding" id="bot_selected" />
+        </div>
+    </div>
+
+
+    <div class="col" id="main">
+        <div id="ballbot" class="inner">
+            <iframe src="/bot/blank" frameborder="0"></iframe>
+        </div>
+        <div id="dev_panel" class="inner">
+            <textarea id="input" rows="20"># Loading code...</textarea>
+        </div>
+    </div>
+
+    <div class="col" id="controls">
+        <div class="inner">
+            <div id="execution_controls">
+                <input type="button" disabled="disabled" value="Go!" id="execute_toggle" />
+                <span id="progress"></span>
+            </div>
+            <div id="progress_meter">
+                <div id="progress_bar">
+                </div>
+            </div>
+            <div id="examples_dropdown" class="dropdown">
+                <div class="dropdown_header">
+                    code examples
+                </div>
+                <div class="dropdown_content">
+                    <h1>General examples</h1>
+                    <table id="general_examples">
+                    </table>
+                    <h1>Examples for the {{ driver_title }}</h1>
+                    <table id="driver_examples">
+                    </table>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropdown_header">
+                    qr code
+                    <span id="qr_alert" class="alert"></span>
+                </div>
+                <div class="dropdown_content">
+                    <div id="qr_box">
+                        <span class="qr_register"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropdown_header">
+                    debug console
+                    <span id="debug_alert" class="alert"></span>
+                </div>
+                <div class="dropdown_content">
+                    <div class="console">
+                        <pre id="debug_panel"></pre>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <div class="dropdown_header">
+                    errors
+                    <span id="error_alert" class="alert"></span>
+                </div>
+                <div class="dropdown_content">
+                    <div class="console">
+                        <div id="error_panel"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

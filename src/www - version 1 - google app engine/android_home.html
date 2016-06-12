@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="/js/_build/js/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="/js/android.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#connect').click(function() {
+                    var botId = $('#selector').val();
+                    window.location.href = '/android/connect/' + encodeURIComponent(botId);
+                });
+                Android.frameLoaded();
+            });
+        </script>
+    </head>
+    <body>
+        Choose a robot
+        <select id="selector">
+            <option value="sphero" selected="selected">Sphero</option>
+        </select>
+        <input id="connect" type="button" value="Connect" />
+    </body>
+</html>

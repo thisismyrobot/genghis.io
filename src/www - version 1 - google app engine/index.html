@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block pagecss %}
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+{% endblock %}
+
+{% block pagejs %}
+    <script type="text/javascript" src="/js/index.js"></script>
+{% endblock %}
+
+{% block content %}
+    <div id="callout">
+        <h1>Your robot.<br />Everyone's code.</h1>
+        <h2>Bring your robot to life with Python, share your programs with friends and take over the world!</h2>
+        <input type="button" id="develop_direct" value="Get Started">
+    </div>
+    <p>
+        Bring your robots alive without the complexities of installing and configuring software on your PC!
+    </p>
+    <p>
+        GenghisIO uses your Android/iOS phone/tablet to connect the robots on your desk with a powerful and easy to use software environment.
+    </p>
+    <p>
+        If this is your first time, you'll need to set up your phone or tablet by installing the 'GenghisIO Bridge' app.
+    </p>
+    <p>
+        <table id="apps_links">
+            <tr>
+                <td>
+                    <img src="http://www.gstatic.com/android/market_images/web/play_logo_x2.png" width="150px" />
+                    <br />
+                    <a href="/genghisiobridge.apk">Direct test APK link</a>
+                </td>
+                <td>
+                    <img src="https://devimages.apple.com.edgekey.net/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"/>
+                </td>
+            </tr>
+        </table>
+    </p>
+    <p>
+        GenghisIO supports Sphero 2.0, <strike>LEGO NXT</strike> and <strike>Android IOIO</strike> and your mobile device must have Bluetooth.
+    </p>
+    <p>
+        GenghisIO is known to work on IE10, Firefox 28+, Chrome 34+ and iOS (iPad 2).
+    </p>
+{% endblock %}

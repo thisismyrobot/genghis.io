@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="/js/_build/js/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="/js/android.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#scan').click(function() {
+                    Android.scanQR();
+                });
+                $('#go').click(function() {
+                    genghisio.go();
+                });
+                $('#stop').click(function() {
+                    genghisio.stop();
+                });
+                genghisio.pingTicker();
+            });
+
+        </script>
+    </head>
+    <body>
+        <input type="button" value="Scan QR" id="scan" />
+        <input type="button" value="Go" disabled="disabled" id="go" />
+        <input type="button" value="Stop" disabled="disabled" id="stop" />
+    </body>
+</html>

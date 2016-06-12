@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:key="pref_server"
+        android:title="Server"
+        android:dialogTitle="Server"
+        android:entries="@array/pref_server_titles"
+        android:entryValues="@array/pref_server_values"
+        android:defaultValue="http://genghis.io/android" />
+</PreferenceScreen>

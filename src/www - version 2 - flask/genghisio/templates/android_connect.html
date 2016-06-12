@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="/static/js/jquery-2.1.1.js"></script>
+        <script type="text/javascript" src="/static/js/android.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var botId = '{{ botId }}';
+                var btFilter = genghisio.BTFILTERS[botId];
+                /*
+                    Timeout needed to make sure page loads sufficiently to
+                    show "Connecting..." etc.
+                */
+                setTimeout(function() {
+                    genghisio.connectRobot(botId, btFilter);
+                }, 100);
+            });
+        </script>
+    </head>
+    <body>
+        Connecting...
+    </body>
+</html>

@@ -1,0 +1,55 @@
+/*
+
+    Download links
+
+*/
+#apps_links {
+    width:100%;
+}
+
+#apps_links td {
+    text-align: center;
+}
+
+/*
+
+    Callout
+
+*/
+#callout h1 {
+    font-weight: normal;
+    font-size:68px;
+    margin:0;
+    width:600px;
+    float:left;
+}
+
+#callout h2 {
+    font-weight: normal;
+    font-size:26px;
+    margin:0;
+    width:600px;
+    float:left;
+}
+
+#callout {
+    padding-top:10px;
+    height:270px;
+    color: white;
+}
+
+#develop_direct {
+    float: right;
+    margin-top:3px;
+    font-size:28px;
+    padding:10px 25px;
+}
+
+#app_wide {
+    height: 270px;
+    background-color: rgb(43, 43, 43);
+    background-image: url('/img/callout_bg.png');
+    background-repeat: repeat;
+    background-position: center;
+    border-top:2px solid black;
+}
